@@ -1,5 +1,5 @@
 <div>
-    <!--   When there is no desire, all things are at peace. - Laozi -->
-    selamat datang di home {{$nama}}<br>
-    anda adalah seorang {{$pekerjaan}}
+    <!-- Tampilkan nilai dari variabel nama dan pekerjaan -->
+    Selamat datang di home {{ $nama }}
+    Anda adalah seorang {{ $pekerjaan }}
 </div>
