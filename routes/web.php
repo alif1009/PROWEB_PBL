@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 Use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListBarangController;
+use App\Http\Controllers\DashboardController;
+
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -36,3 +38,5 @@ Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']
 Route::get('/login/{username}/{password}', function($username, $password){
     return view('login', compact('username', 'password'));
 });
+
+Route::get('/dashboard', [DashboardController::class, 'dashboard']);
