@@ -10,7 +10,7 @@ class DashboardController extends Controller
     public function dashboard()
 
     {
-        $title = "Dashboard JUALBAKSO";
+        $title = "Dashboard PBL Kelompok 2";
 
         return view('dashboard', compact('title'));
     }
