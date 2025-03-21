@@ -4,9 +4,6 @@ use Illuminate\Support\Facades\Route;
 Use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListBarangController;
 use App\Http\Controllers\DashboardController;
-use app\Http\Controllers\ListItemController;
-use App\Models\Absen;
-
 
 
 Route::get('/welcome', function () {
@@ -43,16 +40,3 @@ Route::get('/login/{username}/{password}', function($username, $password){
 });
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard']);
-
-
-Route::get('/listitem/{id}/{name}', [ListItemController::class, 'yourFunction']);
-
-
-// Route untuk Projek PBL SEMESTER 1
-Route::get('/dashboard', function () {
-    return view('dashboard_view');
-});
-Route::get('/datastaf', function () {
-    $absens = Absen::all(); // Ambil semua data dari tabel absen
-    return view('datastaf_view', compact('absens'));
-});
